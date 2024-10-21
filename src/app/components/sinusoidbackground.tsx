@@ -65,7 +65,7 @@ const SinusoidBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute inset-0 bg-black"></canvas>;
+  return <canvas ref={canvasRef} className="absolute inset-0 bg-black z-0"></canvas>;
 };
 
 export default SinusoidBackground;
