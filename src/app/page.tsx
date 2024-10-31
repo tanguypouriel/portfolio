@@ -10,6 +10,13 @@ import {
 } from "@/components/ui/card"
 import FloatingMenu from "./components/floating_menu";
 import CardGrid from "./card_grid";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Tanguy Pouriel',
+  description: 'Freelance fullstack Mobile developer',
+}
+
 
 export default async function Home() {
   return (
