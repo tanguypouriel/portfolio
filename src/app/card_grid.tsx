@@ -10,8 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import CardGridItem from './card_grid_item';
 
-interface CardData {
+export interface CardData {
   title: string;
   description: string;
   tags: string[];
@@ -26,48 +27,52 @@ const cards: CardData[] = [
     title: 'Marveen',
     description: 'A secure and eco-responsible solution for your file management and sharing usescases',
     tags: [
-      'Flutter', 'Firebase', 'Typescript', 'E2E testing', 'CI/CD', 'Python', 'Bash',
+      'Flutter', 'Firebase', 'Typescript', 'E2E testing', 'CI/CD', 'Python', 'Bash', 'Docker',
     ],
-    imageUrl: '/marveen-banner.png',
-    buttonText: 'Website',
+    imageUrl: '/marveen.jpg',
+    buttonText: 'website',
     buttonUrl: 'https://www.classifid.fr/',
     buttonIconUrl: "/marveen_favicon.png",
+  },
+  {
+    title: 'Askinator',
+    description: 'A reverse Akinator game powered by IA',
+    tags: [
+      'Flutter', 'Web app', 'Javascript', 'Appwrite'
+    ],
+    imageUrl: '/askinator.jpg',
+    buttonText: 'Play the game',
+    buttonUrl: 'https://askinator-c6fe5.web.app/',
+    buttonIconUrl: "/askinator-favicon.png",
+  },
+  {
+    title: 'Golfbook',
+    description: 'A fullstack side-project that allows golfers to share their scores in real-time',
+    tags: [
+      'Android', 'Kotlin', 'Ktor', 'PostgreSQL', 'Jetpack Compose'
+    ],
+    imageUrl: '/golfbook.jpg',
+    buttonText: 'Github repo',
+    buttonUrl: 'https://github.com/tanguypouriel/golfbook',
+    buttonIconUrl: "https://github.githubassets.com/favicons/favicon.png",
+  },
+  {
+    title: 'Nexcoin',
+    description: 'A lean Fintech mobile app UI built with Flutter',
+    tags: [
+      'Flutter', 'Design reproduction'
+    ],
+    imageUrl: '/nexcoin.jpg',
+    buttonText: 'Github repo',
+    buttonUrl: 'https://github.com/tanguypouriel/nexcoin',
+    buttonIconUrl: "https://github.githubassets.com/favicons/favicon.png",
   },
 ];
 
 const CardGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
-      {cards.map((card, index) => (
-        <Card key={index}>
-          <CardHeader className="p-0">
-            <Image src={card.imageUrl} alt={card.title} className="w-full rounded-t-lg"  width={300} height={400}/>
-          </CardHeader>
-          <CardContent className='pt-4'>
-            <CardTitle>{card.title}</CardTitle>
-            <p className="text-gray-700 dark:text-gray-300 mt-2">{card.description}</p>
-            
-            <div className="flex flex-wrap gap-2 mt-4">
-              {card.tags.map((tag, tagIndex) => (
-                <span key={tagIndex} className="text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            
-            <div className="mt-4">
-              <Button asChild variant="outline">
-                <a href={card.buttonUrl} target="_blank" rel="noopener noreferrer">
-                  <div className="flex items-center justify-center gap-2">
-                    <Image src={card.buttonIconUrl} alt='' width={16} height={16} />
-                    <span className="text-sm">{card.buttonText}</span>
-                  </div>
-                </a>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 lg:w-3/5 ">
+      {cards.map((card, index) => <CardGridItem card={card} index={index}/>)}
     </div>
   );
 };
