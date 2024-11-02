@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { CardData } from './card_grid';
 
-function CardGridItem({ card, index }: { card: CardData, index: number }) {
+function CardGridItem({ card }: { card: CardData }) {
 
     const [isModalOpen, setModalOpen] = useState(false);
 
@@ -21,7 +21,7 @@ function CardGridItem({ card, index }: { card: CardData, index: number }) {
 
     return (
         <>
-            <Card key={index} className='flex flex-col items-start bg-black overflow-hidden bg-opacity-20 backdrop-blur-xl rounded-3xl text-white border-2 border-teal-100'>
+            <Card className='flex flex-col items-start bg-black overflow-hidden bg-opacity-20 backdrop-blur-xl rounded-3xl text-white border-2 border-teal-100'>
                 <CardHeader className="p-0">
                     <Image
                         src={card.imageUrl}
@@ -68,7 +68,7 @@ function CardGridItem({ card, index }: { card: CardData, index: number }) {
                         <button className="absolute top-2 right-4 text-white text-2xl hover:text-black" onClick={closeModal}>
                             &times;
                         </button>
-                        <Image src={card.imageUrl} alt={card.title} width={960} height={720} className="rounded-lg" quality={100}/>
+                        <Image src={card.imageUrl} alt={card.title} width={960} height={720} className="rounded-lg" quality={100} />
                     </div>
                 </div>
             )}

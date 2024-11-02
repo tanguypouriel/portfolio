@@ -14,7 +14,7 @@ export default function ContactSection() {
                 <Link href="mailto:pourieltanguy@gmail.com" className="text-cyan-400 underline">
                     email
                 </Link>{' '}
-                and I'll respond as fast as I can.
+                and I&apos;ll respond as fast as I can.
             </p>
         </section>
     );

@@ -61,7 +61,7 @@ const cards: CardData[] = [
 const CardGrid = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 pt-8 lg:w-3/5 ">
-      {cards.map((card, index) => <CardGridItem card={card} index={index}/>)}
+      {cards.map((card, index) => <CardGridItem key={index} card={card} />)}
     </div>
   );
 };

@@ -2,7 +2,7 @@
 
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import animationData from "./../../../public/animation.json";
-import { MutableRefObject, useRef } from "react";
+import { useRef } from "react";
 
 interface AnimationProps {
     className?: string;
