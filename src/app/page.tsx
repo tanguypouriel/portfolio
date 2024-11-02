@@ -19,7 +19,7 @@ export default async function Home() {
 
         <div className="flex flex-col-reverse md:flex-row ">
           <AboutMeSection className="flex-[5_5_0%]" />
-          <Animation className="flex-[2_2_0%]" />
+          <Animation className="flex-[2_2_0%] self-start mb-8" />
         </div>
 
         <WorkSection />
