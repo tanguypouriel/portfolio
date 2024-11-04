@@ -63,7 +63,7 @@ const skillsData: { [index: string]: SkillData[] } = {
         },
         {
             title: "MariaDB",
-            imageUrl: "/skills/mariaDB.png",
+            imageUrl: "/skills/mariadb.png",
         }
     ],
     "Langages": [
@@ -142,6 +142,10 @@ const skillsData: { [index: string]: SkillData[] } = {
         {
             title: "Jira",
             imageUrl: "/skills/jira.png",
+        },
+        {
+            title: "Sentry",
+            imageUrl: "/skills/sentry.png",
         },
     ]
 };
