@@ -14,21 +14,25 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center bg-gray-900 min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center z-10 text-white">
+    <>
+      <div className="fixed bg-pixels inset-0 bg-contain opacity-15 " />
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center bg-gray-900/90 min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
-        <div className="flex flex-col-reverse md:flex-row ">
-          <AboutMeSection className="flex-[5_5_0%]" />
-          <Animation className="flex-[2_2_0%] self-start mb-8" />
-        </div>
+        <main className="flex flex-col gap-8 row-start-2 items-center z-10 text-white">
 
-        <WorkSection />
+          <div className="flex flex-col-reverse md:flex-row ">
+            <AboutMeSection className="flex-[5_5_0%]" />
+            <Animation className="flex-[2_2_0%] self-start mb-8" />
+          </div>
 
-        <ContactSection />
-        <FloatingMenu />
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center z-10">
-      </footer>
-    </div>
+          <WorkSection />
+
+          <ContactSection />
+          <FloatingMenu />
+        </main>
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center z-10">
+        </footer>
+      </div>
+    </>
   );
 }
