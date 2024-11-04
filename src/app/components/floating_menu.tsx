@@ -49,6 +49,18 @@ const FloatingMenu = () => {
           />
         </a>
       </Button>
+
+      <Button variant="ghost" size="icon" className='hover:bg-transparent'>
+        <a href="https://www.malt.fr/profile/tanguypouriel" target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/malt.png"
+            alt="malt"
+            width={24}
+            height={24}
+            className="invert transform transition-transform duration-200 hover:scale-[1.5]"
+          />
+        </a>
+      </Button>
     </div>
   );
 };
