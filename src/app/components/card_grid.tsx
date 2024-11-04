@@ -18,10 +18,10 @@ const cards: CardData[] = [
     tags: [
       'Flutter', 'Material 3', 'System Architecture', 'Firebase', 'Typescript', 'Express', 'NodeJS', 'TDD', 'E2E testing', 'CI/CD', 'Python', 'Bash', 'Docker', 'Sentry'
     ],
-    imageUrl: '/marveen.jpg',
+    imageUrl: '/projects/marveen.jpg',
     buttonText: 'Website',
     buttonUrl: 'https://www.classifid.fr/',
-    buttonIconUrl: "/marveen_favicon.png",
+    buttonIconUrl: "/projects/marveen_favicon.png",
   },
   {
     title: 'Askinator',
@@ -29,10 +29,10 @@ const cards: CardData[] = [
     tags: [
       'Flutter', 'Web app', 'Javascript', 'NodeJS', 'Appwrite', 'Lottie', 'Rive', 'HuggingFace'
     ],
-    imageUrl: '/askinator.jpg',
+    imageUrl: '/projects/askinator.jpg',
     buttonText: 'Play the game',
     buttonUrl: 'https://askinator-c6fe5.web.app/',
-    buttonIconUrl: "/askinator-favicon.png",
+    buttonIconUrl: "/projects/askinator-favicon.png",
   },
   {
     title: 'Golfbook',
@@ -40,7 +40,7 @@ const cards: CardData[] = [
     tags: [
       'Android', 'Kotlin', 'Ktor', 'PostgreSQL', 'Jetpack Compose'
     ],
-    imageUrl: '/golfbook.jpg',
+    imageUrl: '/projects/golfbook.jpg',
     buttonText: 'Github repo',
     buttonUrl: 'https://github.com/tanguypouriel/golfbook',
     buttonIconUrl: "https://github.githubassets.com/favicons/favicon.png",
@@ -51,7 +51,7 @@ const cards: CardData[] = [
     tags: [
       'Flutter', 'Design reproduction'
     ],
-    imageUrl: '/nexcoin.jpg',
+    imageUrl: '/projects/nexcoin.jpg',
     buttonText: 'Github repo',
     buttonUrl: 'https://github.com/tanguypouriel/nexcoin',
     buttonIconUrl: "https://github.githubassets.com/favicons/favicon.png",

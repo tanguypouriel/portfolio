@@ -5,6 +5,7 @@ import ContactSection from "./components/contact_section";
 import Animation from "./components/animation";
 import AboutMeSection from "./components/about_me_section";
 import WorkSection from "./components/work_section";
+import SkillsSection from "./components/skills_section";
 
 export const metadata: Metadata = {
   title: 'Tanguy Pouriel',
@@ -24,6 +25,8 @@ export default async function Home() {
             <AboutMeSection className="flex-[5_5_0%]" />
             <Animation className="flex-[2_2_0%] self-start mb-8" />
           </div>
+
+          <SkillsSection />
 
           <WorkSection />
 
