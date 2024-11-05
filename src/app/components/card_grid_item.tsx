@@ -11,6 +11,57 @@ import {
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button';
 import { CardData } from './card_grid';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+
+interface AssetsDisplayerProps {
+    assetsUrl: string[];
+}
+
+export function AssetsDisplayer({ assetsUrl }: AssetsDisplayerProps) {
+    return (
+        <div className='flex justify-center w-4/5 h-full p-8'>
+            <Carousel className='flex justify-center size-full p-4 md:p-8 bg-gray-900 rounded-2xl' opts={{ align: "center", loop: true }}>
+                <CarouselContent className='size-full'>
+                    {assetsUrl.map((url, index) => {
+                        let child = <p>Missing content</p>;
+
+                        if (url.includes("jpg")) {
+                            child = <Image
+                                key={index}
+                                src={url}
+                                alt="alt"
+                                className="flex items-center justify-center p-4 md:p-16"
+                                width={1600}
+                                height={1200}
+                                quality={100}
+                            />;
+                        }
+
+                        else if (url.includes('youtube')) {
+                            child = <iframe
+                                src={url}
+                                className="flex size-full items-center justify-center p-4 md:p-16"
+                                allowFullScreen
+                            />;
+                        }
+
+                        return <CarouselItem key={index} className='flex items-center h-full'>{child}</CarouselItem>
+                    }
+                    )}
+                </CarouselContent>
+                <CarouselPrevious className='cursorPointer' />
+                <CarouselNext />
+            </Carousel>
+
+        </div>
+    );
+}
 
 function CardGridItem({ card }: { card: CardData }) {
 
@@ -27,6 +78,7 @@ function CardGridItem({ card }: { card: CardData }) {
                         src={card.imageUrl}
                         alt={card.title}
                         className="w-full cursor-pointer"
+                        objectFit='contain'
                         width={1600}
                         height={1200}
                         onClick={openModal}
@@ -63,13 +115,9 @@ function CardGridItem({ card }: { card: CardData }) {
 
             {/* Modal for Large Image View */}
             {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50" onClick={closeModal}>
-                    <div className="relative">
-                        <button className="absolute top-2 right-4 text-white text-2xl hover:text-black" onClick={closeModal}>
-                            &times;
-                        </button>
-                        <Image src={card.imageUrl} alt={card.title} width={960} height={720} className="rounded-lg" quality={100} />
-                    </div>
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+                    <div className="absolute inset-0" onClick={closeModal}></div>
+                    <AssetsDisplayer assetsUrl={card.assetsUrl} />
                 </div>
             )}
         </>
