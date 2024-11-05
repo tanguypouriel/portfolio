@@ -21,7 +21,7 @@ function CardGridItem({ card }: { card: CardData }) {
 
     return (
         <>
-            <Card className='flex flex-col items-start bg-transparent overflow-hidden  backdrop-blur-xl rounded-3xl text-white border-2 border-teal-100 transition-all duration-200 m-[1px] hover:m-0'>
+            <Card className='flex flex-col items-start bg-transparent overflow-hidden  backdrop-blur-xl rounded-3xl text-white border-2 border-teal-100 transform transition-transform duration-200 hover:scale-[1.02]'>
                 <CardHeader className="p-0">
                     <Image
                         src={card.imageUrl}
