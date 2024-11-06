@@ -8,7 +8,7 @@ export default function ContactSection() {
             <p className="text-center text-xl text-white-600">
                 Want to chat? Just send me a message<br/> on{' '}
                 <Link href="https://www.linkedin.com/in/tanguy-pouriel-020300159/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">
-                    Linked
+                    LinkedIn
                 </Link>{' '}
                 or via{' '}
                 <Link href="mailto:pourieltanguy@gmail.com" className="text-cyan-400 underline">
