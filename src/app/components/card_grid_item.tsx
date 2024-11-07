@@ -32,15 +32,18 @@ export function AssetsDisplayer({ assetsUrl }: AssetsDisplayerProps) {
                         let child = <p>Missing content</p>;
 
                         if (url.includes("jpg")) {
-                            child = <Image
-                                key={index}
-                                src={url}
-                                alt="alt"
-                                className="flex items-center justify-center p-4 md:p-16"
-                                width={1600}
-                                height={1200}
-                                quality={100}
-                            />;
+                            child =
+                                <div className='p-8'>
+                                    <Image
+                                        key={index}
+                                        src={url}
+                                        alt="alt"
+                                        className="flex rounded-xl items-center justify-center"
+                                        width={1600}
+                                        height={1200}
+                                        quality={100}
+                                    />
+                                </div>;
                         }
 
                         else if (url.includes('youtube')) {
@@ -55,8 +58,8 @@ export function AssetsDisplayer({ assetsUrl }: AssetsDisplayerProps) {
                     }
                     )}
                 </CarouselContent>
-                <CarouselPrevious className='cursorPointer' />
-                <CarouselNext />
+                <CarouselPrevious className='bg-primary' />
+                <CarouselNext className='bg-primary' />
             </Carousel>
 
         </div>
