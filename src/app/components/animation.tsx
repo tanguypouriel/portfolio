@@ -11,6 +11,6 @@ export default function Animation({ className }: AnimationProps) {
     return <Lottie
         animationData={animationData}
         loop={false}
-        className={`flex-2 ${className}`}
+        className={` ${className}`}
     />
 }

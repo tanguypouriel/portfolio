@@ -26,7 +26,7 @@ const FloatingMenu = () => {
         <a href="https://github.com/tanguypouriel" target="_blank" rel="noopener noreferrer">
 
           <Image
-            className="invert transform transition-transform duration-200 hover:scale-[1.5]"
+            className="transform transition-transform duration-200 hover:scale-[1.5]"
             src="/github.png"
             alt="github logomark"
             width={24}
@@ -42,7 +42,7 @@ const FloatingMenu = () => {
             alt="LinkedIn"
             width={24}
             height={24}
-            className="invert transform transition-transform duration-200 hover:scale-[1.5]"
+            className="transform transition-transform duration-200 hover:scale-[1.5]"
           />
         </a>
       </Button>
@@ -54,7 +54,7 @@ const FloatingMenu = () => {
             alt="malt"
             width={24}
             height={24}
-            className="invert transform transition-transform duration-200 hover:scale-[1.5]"
+            className="transform transition-transform duration-200 hover:scale-[1.5]"
           />
         </a>
       </Button>

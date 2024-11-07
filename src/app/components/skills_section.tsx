@@ -156,8 +156,8 @@ interface SkillsSectionProps {
 
 export default function SkillsSection({ className }: SkillsSectionProps) {
     return (
-        <section className={`flex flex-col items-center w-full gap-4 p-6 ${className}`}>
-            <h1 className="text-4xl font-bold self-start mx-16 text-teal-100">Skills</h1>
+        <section className={`flex flex-col items-center w-full bg-indigo-50 gap-4 p-16 text-gray-900 ${className}`}>
+            <h1 className="text-4xl font-bold self-start mx-16">Skills</h1>
 
             <p className='text-justify p-4 mx-4 text-xl self-start'>
                 A versatile skill set crafted to bring ideas to life—from intuitive UI design to robust backend integration, delivering mobile experiences that make an impact.

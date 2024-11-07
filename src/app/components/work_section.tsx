@@ -7,8 +7,8 @@ interface WorkProps {
 
 export default function WorkSection({ className }: WorkProps) {
     return (
-        <section className={`flex flex-col items-center gap-4 p-6 ${className}`}>
-            <h1 className="text-4xl font-bold self-start mx-16 text-teal-100">Projects</h1>
+        <section className={`flex flex-col items-center gap-4 p-16 ${className}`}>
+            <h1 className="text-4xl font-bold self-start mx-16 text-indigo-50">Projects</h1>
 
             <p className='text-justify p-4 mx-4 text-xl'>
                 Here&apos;s a showcase of my mobile development journey—each project representing milestones in my growth and expertise.<br />
