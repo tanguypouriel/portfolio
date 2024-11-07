@@ -14,21 +14,18 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   return (
-    <>
-      <div className="bg-gray-900 min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-gray-900 min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
 
-        <main className="flex flex-col items-center z-10 text-white">
+      <main className="flex flex-col items-center z-10 text-white">
+        <AboutMeSection />
 
-          <AboutMeSection />
+        <SkillsSection />
 
-          <SkillsSection />
+        <WorkSection />
 
-          <WorkSection />
-
-          <ContactSection />
-          <FloatingMenu />
-        </main>
-      </div>
-    </>
+        <ContactSection />
+        <FloatingMenu />
+      </main>
+    </div>
   );
 }

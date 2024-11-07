@@ -156,10 +156,12 @@ interface SkillsSectionProps {
 
 export default function SkillsSection({ className }: SkillsSectionProps) {
     return (
-        <section className={`flex flex-col items-center w-full bg-indigo-50 gap-4 p-16 text-gray-900 ${className}`}>
-            <h1 className="text-4xl font-bold self-start mx-16">Skills</h1>
+        <section className={`flex flex-col items-center w-full bg-indigo-50 gap-4 p-6 md:p-16 text-gray-900 ${className}`}>
+            <h1 className="text-2xl md:text-4xl font-bold self-start mx-16">Skills</h1>
 
-            <p className='text-justify p-4 mx-4 text-xl self-start'>
+{/* px-2 md:px-8 text-justify md:mx-8 */}
+
+            <p className='text-justify md:p-4 md:mx-4 text-md md:text-xl self-start'>
                 A versatile skill set crafted to bring ideas to life—from intuitive UI design to robust backend integration, delivering mobile experiences that make an impact.
             </p>
 
@@ -169,7 +171,7 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
                         <AccordionItem key={index} value={`catgory-${index}`}>
                             <AccordionTrigger>{categoryTitle}</AccordionTrigger>
                             <AccordionContent>
-                                <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 p-4 pt-8">
+                                <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4 p-4 pt-8">
                                     {categorySkills.map((skill, index) => <SkillItem key={index} skillData={skill} />)}
                                 </div>
                             </AccordionContent>
